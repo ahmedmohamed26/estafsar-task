@@ -1,0 +1,71 @@
+    {
+    "inputs": [
+        {
+            "label": "first name",
+            "value": "",
+            "type":"text",
+            "name":"firstName",
+        },
+        {
+            "label": "last name",
+            "value": "",
+            "type":"text",
+             "name":"lastName",
+        },
+        {
+            "label": "email",
+            "value": "",
+            "type":"email",
+             "name":"email",
+        },
+        {
+            "label": "password",
+            "value": "",
+            "type":"password",
+            "name":"password",
+        },
+         {
+            "label": "gender",
+            "value": "",
+            "type":"radio",
+            "name":"gender",
+             "options": [
+                {
+            "id": "male",
+            "name": "male",
+                 },
+                {
+            "id": "female",
+            "name": "female",
+                 },
+            ]
+        },
+         {
+            "label": "Agree on terms & conditions",
+            "value": "",
+            "name":"conditions",
+            "type":"checkbox"
+        },
+        {
+            "label": "country",
+            "value": "",
+            "type":"select",
+            "name":"country",
+            "options": [
+                {
+                    "id":"egypt",
+                    "name":"egypt",
+                },
+                {
+                    "id":"france",
+                    "name":"england",
+                },
+                {
+                    "id":"france",
+                    "name":"france",
+                },
+            ]
+        },
+        
+    ],
+}

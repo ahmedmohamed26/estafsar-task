@@ -1,0 +1,8 @@
+<div cdkDropList class="people-list" (cdkDropListDropped)="drop($event)">
+  <div class="card" *ngFor="let person of people" cdkDrag>
+    <h3 class="title">name : <span>{{person.name}}</span></h3>
+    <h3 class="title">height : <span>{{person.height}}</span></h3>
+    <h3 class="title">url : <span>{{person.url}}</span></h3>
+    <h3 class="title">homeworld : <span>{{person.homeworld}}</span></h3>
+  </div>
+</div>
