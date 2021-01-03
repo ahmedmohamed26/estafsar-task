@@ -1,4 +1,4 @@
-import { People } from './../../shared/models/people';
+import { IPersons, IPerson } from './../../shared/models/people';
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { HomeService } from './home.service';
@@ -9,7 +9,8 @@ import { HomeService } from './home.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  people: People[] = [];
+  persons: IPerson[] = [];
+  filter: any;
   constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {
@@ -17,10 +18,12 @@ export class HomeComponent implements OnInit {
   }
 
   getAllPeople() {
-    this.homeService.getPeople().subscribe((response:any) => this.people = response.results);
+    this.homeService
+      .getPeople()
+      .subscribe((response: IPersons) => this.persons = response.results);
   }
 
   drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.people, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.persons, event.previousIndex, event.currentIndex);
   }
 }

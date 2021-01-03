@@ -8,7 +8,7 @@ import { environment } from '../../../environments/environment';
 export class HomeService {
   constructor(private http: HttpClient) {}
 
-  getPeople() {
+  getPeople(){
     return this.http.get(`${environment.apiKey}/people/`);
   }
 }

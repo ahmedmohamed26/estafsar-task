@@ -1,30 +1,47 @@
+@import '../../../assets/style/variables.scss';
+
+.home {
+  padding:$paddingPage;
+
+  .example-full-width {
+    width: 100%;
+  }
+}
+
 .people-list {
-  width: 500px;
+  width: 100%;
   max-width: 100%;
   overflow: hidden;
-  background: white;
+  background: $bgColor;
 
 }
-    .card {
-      padding: 10px;
-      margin-bottom: 10px;
-      border: solid 1px #ccc;
-      cursor: move;
-      font-size: 14px;
-      border-radius: 4px;
-      background: white;
-  
-      .title {
-        text-transform: capitalize;
-      }
+
+.card {
+  padding: $paddingCard;
+  margin-bottom: 10px;
+  border: $border;
+  cursor: move;
+  font-size: $normalSize;
+  border-radius: $borderRadius;
+  background: $bgColor;
+
+  .title {
+    font-size: $normalSize;
+    color: $main-color;
+    text-transform: capitalize;
+    font-family: 'poppins-regular';
+
+    span {
+      color: $second-color;
+      font-size: $smallSize;
     }
+  }
+}
 
 .cdk-drag-preview {
   box-sizing: border-box;
-  border-radius: 4px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-    0 8px 10px 1px rgba(0, 0, 0, 0.14),
-    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
 }
 
 .cdk-drag-placeholder {
@@ -32,7 +49,7 @@
 }
 
 .cdk-drag-animating {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  transition: $transitionDrag;
 }
 
 .example-box:last-child {
@@ -40,5 +57,5 @@
 }
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  transition: $transitionDrag;
 }
