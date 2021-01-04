@@ -1,27 +1,35 @@
-# EstafsarTask
+# Estafsar Task
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+
+## **Installation & Running Steps**
+
+1. (**Clone | Download**) the repository.
+2. Open the repository path in your terminal.
+3. Write (**npm i** | **yarn install**).
+4. After installation write (**npm start** | **yarn start**).
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## **Information**
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* I've using **Angular Material** as a design and drag drop.
+* scalability in both design and code so using lazy loading in project 
+* i Use clean, well-documented and structured code  
+* I've using **Prettier** as a default code formatter.
+* I've using **ESlint** as a default linter in development process.
 
-## Further help
+## **Enhancements**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Enhance the project & make the component more reusable..
+
+
+## **Why I didn't finish the unit testing 100%  ?**
+
+* I have some experience in jest with react but This is the first time I use Karma with angular so I did not do unit testing except in HomeService 

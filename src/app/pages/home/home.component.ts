@@ -9,6 +9,7 @@ import { HomeService } from './home.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  loadSpinner: boolean = false;
   persons: IPerson[] = [];
   filter: any;
   constructor(private homeService: HomeService) {}
@@ -18,9 +19,12 @@ export class HomeComponent implements OnInit {
   }
 
   getAllPeople() {
-    this.homeService
-      .getPeople()
-      .subscribe((response: IPersons) => this.persons = response.results);
+    this.loadSpinner = true;
+    this.homeService.getPeople().subscribe((response: IPersons) => {
+      this.persons = response.results;
+      this.loadSpinner = false;
+    }),
+      (err) => alert(err.error.message);
   }
 
   drop(event: CdkDragDrop<string[]>) {

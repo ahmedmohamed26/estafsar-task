@@ -1,7 +1,14 @@
 @import '../../../assets/style/variables.scss';
 
+
 .home {
-  padding:$paddingPage;
+  padding: $paddingPage;
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+
+  }
 
   .example-full-width {
     width: 100%;
